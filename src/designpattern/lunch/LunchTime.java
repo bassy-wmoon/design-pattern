@@ -3,32 +3,26 @@ package designpattern.lunch;
 import java.util.Calendar;
 
 public class LunchTime {
-	public void goLunch(LunchEnum lunch) {
-		switch (lunch) {
+	public void goLunch(LunchEnum lunchMenu) {
+		LunchFactory lunch = null;
+		switch (lunchMenu) {
 		case とんこつラーメン:
-			// ラーメン屋に入る
-			// 食券を買う
-			// 席に座る
-			// 食べる
-			// 店を出る
+			lunch = new TonkotsuRamen();
 			break;
 		case 塩ラーメン:
-			// ラーメン屋に入る
-			// 食券を買う
-			// 席に座る
-			// 食べる
-			// 支払いをする
-			// 店を出る
+			lunch = new SioRamen();
 			break;
 		case 焼き魚定食:
-			// 定食屋に入る
-			// 食券を買う
-			// 席に座る
-			// 食べる
-			// 店を出る
+			lunch = new SammaTeisyoku();
 			break;
 			// ・・・・etc
 		}
+		lunch.in();
+		lunch.sit();
+		lunch.order();
+		lunch.eat();
+		lunch.bill();
+		lunch.exit();
 		
 		Calendar today = Calendar.getInstance();
 		if (Calendar.WEDNESDAY == today.get(Calendar.DAY_OF_WEEK)) {
