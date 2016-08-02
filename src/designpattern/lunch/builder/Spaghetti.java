@@ -1,6 +1,6 @@
-package designpattern.lunch;
+package designpattern.lunch.builder;
 
-public class Spaghetti extends LunchFactory {
+public class Spaghetti implements LunchBuilder {
 	@Override
 	public void in() {
 		System.out.println("話題のイタリアンに来ました！");

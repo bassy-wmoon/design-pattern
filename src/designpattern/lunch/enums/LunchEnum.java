@@ -1,4 +1,4 @@
-package designpattern.lunch;
+package designpattern.lunch.enums;
 
 public enum LunchEnum {
 	とんこつラーメン,

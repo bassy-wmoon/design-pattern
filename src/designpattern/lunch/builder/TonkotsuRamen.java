@@ -1,6 +1,6 @@
-package designpattern.lunch;
+package designpattern.lunch.builder;
 
-public class TonkotsuRamen extends LunchFactory {
+public class TonkotsuRamen implements LunchBuilder {
 	@Override
 	public void in() {
 		System.out.println("とんこつラーメン屋に入ったで");
