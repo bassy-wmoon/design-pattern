@@ -1,5 +1,6 @@
 package designpattern.lunch.factory;
 
+import designpattern.lunch.director.LunchDirector;
 import designpattern.lunch.enums.LunchEnum;
 
 public abstract class LunchFactory {
@@ -8,7 +9,7 @@ public abstract class LunchFactory {
 		return createFactory(lunchMenu);
 	}
 	
-	abstract public void goLunch();
+	abstract public LunchDirector getDirector();
 	
 	private static LunchFactory createFactory(LunchEnum lunchMenu) {
 		LunchFactory lunch = null;

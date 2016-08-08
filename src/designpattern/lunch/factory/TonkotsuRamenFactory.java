@@ -5,14 +5,8 @@ import designpattern.lunch.director.LunchDirector;
 import designpattern.lunch.director.RamenDirector;
 
 public class TonkotsuRamenFactory extends LunchFactory {
-	LunchDirector director = null;
-	
-	public TonkotsuRamenFactory() {
-		director = new RamenDirector(new TonkotsuRamen());
-	}
-	
 	@Override
-	public void goLunch() {
-		director.lunch();
+	public LunchDirector getDirector() {
+		return new RamenDirector(new TonkotsuRamen());
 	}
 }
