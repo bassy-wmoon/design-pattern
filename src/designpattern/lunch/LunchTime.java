@@ -8,8 +8,8 @@ import designpattern.lunch.factory.LunchFactory;
 public class LunchTime {
 	public void goLunch(LunchEnum lunchMenu) {
 		
-		LunchFactory factory = LunchFactory.getFactory();
-		factory.goLunch(lunchMenu);
+		LunchFactory factory = LunchFactory.getFactory(lunchMenu);
+		factory.goLunch();
 		
 		Calendar today = Calendar.getInstance();
 		if (Calendar.WEDNESDAY == today.get(Calendar.DAY_OF_WEEK)) {
